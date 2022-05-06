@@ -1,6 +1,15 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const numObj = {}
+  for (i = 0; i < nums.length; i++){
+      let diff = target - nums[i]
+      if(diff in numObj){
+          return [i, numObj[diff]]
+      } else {
+          numObj[nums[i]] = i
+      }
+  }
 }
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +17,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Add the total of an 'array', with the 'target' integer
+
 */
 
 /*
